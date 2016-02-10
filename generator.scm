@@ -27,11 +27,13 @@
 
 (define grammer
   '(
-    (S        NP)
+    (S        NP (VT NP))
     (NP       (a N-single) (a AJS N-single) N-plural (AJS N-plural))
-    (N-single food babe cafe beef face feed cable office bed disease)
-    (N-plural faces)
+    (N-single food babe cafe beef face feed cable office bed disease fish seed sofa coffee bee
+              (side effect))
+    (N-plural faces boobs fish bees sofas beds (side effects))
+    (VT       feed decide)
     (VI       feel decafe face feed defecate)
     (AJS      ADJ)
-    (ADJ      bad dead)
+    (ADJ      bad dead big sad)
     ))
