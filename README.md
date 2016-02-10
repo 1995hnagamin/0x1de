@@ -1,0 +1,2 @@
+# 0xide
+Hexspeak generator
