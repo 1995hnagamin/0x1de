@@ -1,0 +1,15 @@
+#!/usr/bin/env gosh
+
+(load "./generator.scm")
+(use srfi-13)
+
+(define (char-hexcase char)
+  (cadr (assoc char '((#\o #\0) (#\i #\1) (#\l #\1) (#\s #\5) (#\g #\6) (#\t #\8)
+                      (#\a #\A) (#\b #\B) (#\c #\C) (#\d #\D) (#\e #\E) (#\f #\F)
+                      (#\space #\space)))))
+
+(define (string->hex str)
+  (string-map char-hexcase str))
+
+(display (string->hex (list->sentence (generate grammer 'S) )))
+(newline)
