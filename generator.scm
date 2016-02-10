@@ -1,4 +1,5 @@
 (use srfi-27)
+(random-source-randomize! default-random-source)
 
 (define (sample lst)
   (list-ref lst (random-integer (length lst))))
