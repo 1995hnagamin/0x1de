@@ -22,16 +22,15 @@
                   (snoc stream (car stack)))))))
 
 (define (list->sentence lst)
-  (string-append (string-join (map x->string lst) " ")
-                 "."))
+  (string-join (map x->string lst) " "))
 
 (define grammer
   '(
     (S        NP (VT NP))
     (NP       (a N-single) (a AJS N-single) N-plural (AJS N-plural))
-    (N-single food babe cafe beef face feed cable office bed disease fish seed sofa coffee bee
+    (N-single food babe cafe beef face feed cable office bed disease seed sofa coffee bee
               (side effect))
-    (N-plural faces boobs fish bees sofas beds (side effects))
+    (N-plural faces boobs bees sofas beds (side effects))
     (VT       feed decide)
     (VI       feel decafe face feed defecate)
     (AJS      ADJ)
